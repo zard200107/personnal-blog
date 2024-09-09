@@ -1,14 +1,8 @@
 import { Outlet } from "react-router-dom/dist";
 import Footer from "./Footer";
-import Header from "./Header";
+import NavBar from "./NavBar";
 
 import styled from "styled-components";
-
-const StyledAppLayout = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-`;
 
 const Main = styled.main`
   background-color: var(--color-grey-50);
@@ -26,8 +20,8 @@ const Container = styled.div`
 
 function AppLayout() {
   return (
-    <StyledAppLayout>
-      <Header />
+    <div>
+      <NavBar />
       <Main>
         <Container>
           <Outlet />
@@ -35,7 +29,7 @@ function AppLayout() {
       </Main>
 
       <Footer />
-    </StyledAppLayout>
+    </div>
   );
 }
 
